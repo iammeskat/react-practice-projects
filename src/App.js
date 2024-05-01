@@ -28,7 +28,10 @@ const App = () => {
 
 	return (
 		<div className='w-full  py-8'>
-			<div className='container flex flex-col gap-24'>
+			<div className='container flex flex-col gap-4'>
+				<p className='text-center font-bold text-2xl'>
+					React Simple Slider with Touch Controll (made from scratch)
+				</p>
 				<Slider
 					gap={16}
 					gapSm={8}
@@ -43,7 +46,7 @@ const App = () => {
 						<Card key={indx} indx={indx} height='48px' />
 					))}
 				/>
-				<div className='w-full flex flex-col gap-4'>
+				<div className='w-full flex flex-col gap-4 mt-16'>
 
 					<div className='w-full min-h-[250px]'>
 						{show &&
