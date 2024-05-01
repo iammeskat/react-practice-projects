@@ -24,6 +24,7 @@ const SliderController = ({
 			<img
 				className="w-6 h-6"
 				src={prevBtnIcon || 'https://cdn.ostad.app/public/icons/arrow-left-line.svg'}
+				alt=''
 			/>
 		</button>
 	);
@@ -42,6 +43,7 @@ const SliderController = ({
 			<img
 				className="w-6 h-6"
 				src={nextBtnIcon || 'https://cdn.ostad.app/public/icons/arrow-right-line.svg'}
+				alt=''
 			/>
 		</button>
 	);
