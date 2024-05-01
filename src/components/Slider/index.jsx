@@ -60,7 +60,7 @@ const OstadSlider = ({
 				setDisableLeft(true);
 			}
 		}
-	}, [ref.current, scrolling]);
+	}, [ref, scrolling]);
 
 	const handleNext = (next = true) => {
 
