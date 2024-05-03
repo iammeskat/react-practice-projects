@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-// import useWindowSize from '../../hooks/useWindowSize';
 import useWindowSize from 'hooks/useWindowSize';
+import React, { useEffect, useRef, useState } from 'react';
 import SliderController from './components/SliderController';
 import styles from './style.module.css';
 
@@ -8,9 +7,9 @@ import styles from './style.module.css';
 /**
 	  *
 	  * @param gap gap in pixel between slide.
-	  * @param gapSm gap in pixel for small screen.
+	  * @param gapSm gap in pixel for small screen (optional).
 	  * @param cardWidth slide width in pixel.
-	  * @param cardWidthSm slide width for small screen.
+	  * @param cardWidthSm slide width for small screen (optional).
 	  * @param slides list of slides.
 	  * @param controllerPosition center | center-out | center-in | center-bottom | right-bottom | right-top | left-bottom | left-top.
 	  * @param hideDisbaleButton hide slider disable button.
@@ -21,7 +20,7 @@ import styles from './style.module.css';
 	  *
 **/
 
-const OstadSlider = ({
+const Slider = ({
 	gap = 16,
 	gapSm = 0,
 	cardWidth = 350,
@@ -60,7 +59,7 @@ const OstadSlider = ({
 				setDisableLeft(true);
 			}
 		}
-	}, [ref.current, scrolling]);
+	}, [ref, scrolling]);
 
 	const handleNext = (next = true) => {
 
@@ -151,4 +150,4 @@ const OstadSlider = ({
 	)
 }
 
-export default OstadSlider
+export default Slider

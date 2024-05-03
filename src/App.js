@@ -1,67 +1,34 @@
 import Slider from 'components/Slider';
-import SliderProps from 'components/SliderProps';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const App = () => {
-	const [show, setShow] = useState(true);
-	const [sliderProps, setSliderProps] = useState({
-		gap: 16,
-		gapSm: 8,
-		cardWidth: 345,
-		cardWidthSm: 250,
-		controllerPosition: "center-bottom",
-		hideDisableButton: false,
-		prevBtnIcon: 'https://cdn.ostad.app/public/icons/arrow-left-s-line.svg',
-		nextBtnIcon: 'https://cdn.ostad.app/public/icons/arrow-right-s-line.svg',
-	})
 
-	useEffect(() => {
-		setShow(false);
-		setTimeout(() => {
-			setShow(true);
-		}, 1);
-	}, [sliderProps])
 
-	const slides = [...Array(15).keys()].map((item, indx) => (
-		<Card key={indx} indx={indx} />
-	));
+	const slides = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 	return (
 		<div className='w-full  py-8'>
-			<div className='container flex flex-col gap-24'>
-				<Slider
-					gap={16}
-					gapSm={8}
-					cardWidth={300}
-					cardWidthSm={250}
-					controllerPosition="center-in"
-					hideDisableButton={true}
-					prevBtnIcon='https://cdn.ostad.app/public/icons/arrow-left-s-line.svg'
-					nextBtnIcon='https://cdn.ostad.app/public/icons/arrow-right-s-line.svg'
-					buttonStyles={{}}
-					slides={[...Array(15).keys()].map((item, indx) => (
-						<Card key={indx} indx={indx} height='48px' />
-					))}
-				/>
-				<div className='w-full flex flex-col gap-4'>
+			<div className='container'>
+				<div className='w-full min-h-[250px] mt-16'>
+					<Slider
+						gap={16}
+						gapSm={8} // optional
+						cardWidth={345}
+						cardWidthSm={250} // optional
+						controllerPosition={"center-bottom"}
+						hideDisableButton={false}
+						hideControllerInSm={false}
+						prevBtnIcon={'https://cdn.ostad.app/public/icons/arrow-left-s-line.svg'}
+						nextBtnIcon={'https://cdn.ostad.app/public/icons/arrow-right-s-line.svg'}
+						buttonStyles={{}}
 
-					<div className='w-full min-h-[250px]'>
-						{show &&
-							<Slider
-								{...sliderProps}
-								gap={parseInt(sliderProps.gap)}
-								gapSm={parseInt(sliderProps.gapSm)}
-								cardWidth={parseInt(sliderProps.cardWidth)}
-								cardWidthSm={parseInt(sliderProps.cardWidthSm)}
-								slides={slides}
-								buttonStyles={{}}
+						slides={slides.map((item, indx) => (
+							<Card
+								key={indx}
+								indx={item}
 							/>
-						}
-					</div>
+						))}
 
-					<SliderProps
-						sliderProps={sliderProps}
-						setSliderProps={setSliderProps}
 					/>
 				</div>
 			</div>
