@@ -23,7 +23,7 @@ const DebounceInput = ({
 			onChange(inputValue);
 		}, delay);
 		return () => clearTimeout(timeoutId);
-	}, [inputValue, delay]);
+	}, [inputValue, delay, onChange]);
 
 	return <textarea
 		name={name}
