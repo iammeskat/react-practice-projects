@@ -17,7 +17,7 @@ const CreateQuestion = ({
 		setQuestion(parts.map(item => (
 			item.isBlank ? `{{${item.text}}}` : item.text
 		))?.join(''));
-	}, [parts]);
+	}, [parts, setQuestion]);
 
 
 	const handleSetAnswer = (key, val) => {
