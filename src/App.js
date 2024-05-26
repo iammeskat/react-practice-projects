@@ -1,12 +1,16 @@
-import React from 'react'
+import Layout from 'components/Layout';
+import FlightDetails from 'containers/FlightDetails';
+import React from 'react';
 
 const App = () => {
+
 	return (
-		<div className='w-full flex flex-col'>
-			<p>Fresh React Project</p>
-		</div>
+		<Layout>
+			<FlightDetails />
+		</Layout>
 	)
 }
+
 
 
 export default App
