@@ -10,7 +10,7 @@ const RouteHeader = ({
 }) => {
 	return (
 		<div className='w-full flex items-center justify-between gap-3 py-1'>
-			<div className='w-9 h-9 flex items-center justify-center'>
+			<div className='w-8 h-9 flex items-center justify-center'>
 				<img
 					className='w-6 h-6'
 					alt='location'

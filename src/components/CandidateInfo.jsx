@@ -33,7 +33,7 @@ const CandidateInfo = () => {
 				Source Code:&nbsp;
 				<a
 					className='hover:text-blue-600'
-					href='https://github.com/iammeskat/codecanyon-react-projects/tree/sharetrip-task'
+					href='https://github.com/iammeskat/react-practice-projects/tree/sharetrip-task'
 					target="_blank"
 					rel="noreferrer"
 				>
